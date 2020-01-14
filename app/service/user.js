@@ -7,9 +7,9 @@ class UserService extends Service {
   * CreateBy 孤岛拾荒
   */
   async addUser(params) {
-    const { ctx, service, app } = this
-    let result = await ctx.model.User.create(params)
-    return result
+    const { ctx } = this;
+    const result = await ctx.model.User.create(params);
+    return result;
   }
 
   /*
@@ -17,11 +17,11 @@ class UserService extends Service {
   * CreateBy 孤岛拾荒
   */
   async getUser(params) {
-    const { ctx, service, app } = this
-    let result = await ctx.model.User.find(params)
-    return result
+    const { ctx } = this;
+    const result = await ctx.model.User.find(params);
+    return result;
   }
 
 }
 
-module.exports = UserService; 
+module.exports = UserService;

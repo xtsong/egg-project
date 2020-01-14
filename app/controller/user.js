@@ -8,12 +8,12 @@ class UserController extends Controller {
   * CreateBy 孤岛拾荒
   */
   async addUser() {
-    const { ctx, service, app } = this
-    ctx.helper.pre("addUser")
-    let params = ctx.request.body || {}
-    let result = await service.user.addUser(params)
-    ctx.body = result
-    ctx.helper.end("addUser")
+    const { ctx, service } = this;
+    ctx.helper.pre('addUser');
+    const params = ctx.request.body || {};
+    const result = await service.user.addUser(params);
+    ctx.body = result;
+    ctx.helper.end('addUser');
   }
 
   /*
@@ -21,12 +21,12 @@ class UserController extends Controller {
   * CreateBy 孤岛拾荒
   */
   async getUser() {
-    const { ctx, service, app } = this
-    ctx.helper.pre("getUser")
-    let params = ctx.query || {}
-    let result = await service.user.getUser(params)
-    ctx.body = result
-    ctx.helper.end("getUser")
+    const { ctx, service } = this;
+    ctx.helper.pre('getUser');
+    const params = ctx.query || {};
+    const result = await service.user.getUser(params);
+    ctx.body = result;
+    ctx.helper.end('getUser');
   }
 
 }
