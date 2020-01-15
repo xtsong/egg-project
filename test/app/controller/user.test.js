@@ -19,11 +19,11 @@ describe('test/controller/user.test.js', () => {
         .get('/getUser?age=20')
         .expect(200)
         .expect([{
-          _id: '5e1d3400480cf006b5779651',
+          _id: '5e1ed4aaf679935a80e5b826',
           age: 20,
           name: 'song',
           info: 'javascript',
-          create_time: '2020-01-14T03:22:40.580Z',
+          create_time: '2020-01-15T09:00:26.330Z',
           __v: 0,
         }]);
     });
@@ -45,11 +45,11 @@ describe('test/controller/user.test.js', () => {
       return app.httpRequest()
         .get('/getUser?age=20')
         .expect([{
-          _id: '5e1d3400480cf006b5779651',
+          _id: '5e1ed4aaf679935a80e5b826',
           age: 20,
           name: 'song',
           info: 'javascript',
-          create_time: '2020-01-14T03:22:40.580Z',
+          create_time: '2020-01-15T09:00:26.330Z',
           __v: 0,
         }]);
     });

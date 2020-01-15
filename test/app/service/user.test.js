@@ -16,27 +16,27 @@ describe('test/service/user.test.js', () => {
   describe('getUser()', () => {
     it('should get exists user', function* () {
       const ctx = app.mockContext();
-      const user = yield ctx.service.user.getUser({ name: 'xiaotao' });
+      const user = yield ctx.service.user.getUser({ name: 'tao' });
       assert(user);
-      assert(user[0].name === 'xiaotao');
+      assert(user[0].name === 'tao');
     });
 
     it('should get null when user not exists', function* () {
       const ctx = app.mockContext();
-      const user = yield ctx.service.user.getUser({ name: 'xiaotao' });
+      const user = yield ctx.service.user.getUser({ name: 'tao' });
       assert(user.length);
     });
 
-    it('should mock xiaotao exists', function* () {
+    it('should mock tao exists', function* () {
       const ctx = app.mockContext();
       app.mockService('user', 'getUser', function* () {
         return {
-          name: 'xiaotao',
+          name: 'tao',
         };
       });
-      const user = yield ctx.service.user.getUser({ name: 'xiaotao' });
+      const user = yield ctx.service.user.getUser({ name: 'tao' });
       assert(user);
-      assert(user.name === 'xiaotao');
+      assert(user.name === 'tao');
     });
   });
 });
