@@ -26,6 +26,7 @@ class UserController extends Controller {
     const params = ctx.query || {};
     const result = await service.user.getUser(params);
     ctx.body = result;
+
     ctx.helper.end('getUser');
   }
 

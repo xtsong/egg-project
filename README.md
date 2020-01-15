@@ -30,4 +30,16 @@ $ npm stop
 - Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
 
 
+### 单元测试
+
+项目整体测试
+- Use `npm test` to run unit test.
+
+
+项目单个模块测试
+- Use `npm test-local` to run unit test.
+
+例如：npm test-local test/app/controller/home.test.js
+
+
 [egg]: https://eggjs.org

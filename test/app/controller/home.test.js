@@ -1,20 +1,20 @@
 'use strict';
 
-const { app, assert } = require('egg-mock/bootstrap');
+const mock = require('egg-mock');
 
 describe('test/app/controller/home.test.js', () => {
-  it('should assert', () => {
-    const pkg = require('../../../package.json');
-    assert(app.config.keys.startsWith(pkg.name));
-
-    // const ctx = app.mockContext({});
-    // yield ctx.service.xx();
+  let app;
+  before(() => {
+    // 创建当前应用的 app 实例
+    app = mock.app();
+    // 等待 app 启动成功，才能执行测试用例
+    return app.ready();
   });
+  afterEach(mock.restore);
 
   it('should GET /', () => {
     return app.httpRequest()
       .get('/')
-      .send({ name: 'john' })
       .expect(200)
       .expect('Hello, egg');
   });
