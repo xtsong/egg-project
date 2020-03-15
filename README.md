@@ -1,6 +1,6 @@
 # project
 
-egg.js分享项目, mongodb
+egg.js分享项目
 
 ## QuickStart
 

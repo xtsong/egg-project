@@ -1,7 +1,7 @@
 {
   "name": "egg-project",
   "version": "1.0.0",
-  "description": "egg.js分享项目",
+  "description": "egg.js分享项目, mongodb",
   "private": true,
   "egg": {
     "declarations": true
